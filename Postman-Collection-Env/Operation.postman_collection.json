@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "79691ffd-cff8-4dc8-ad06-f5bfa13a230b",
+		"name": "Operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33827389"
+	},
+	"item": [
+		{
+			"name": "ModelOperation",
+			"item": [
+				{
+					"name": "Model Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/models",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Model Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\"\r\n    // \"modelName\": \"renamedFile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/models/renamedFile",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"models",
+								"renamedFile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Model Rename",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelOldName\": \"exampleModel\",\r\n    \"modelNewName\": \"renamedFile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/models/exampleModel",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"models",
+								"exampleModel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Model Access",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\"\r\n    // \"modelName\": \"renamedFile\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/models/access",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"models",
+								"access"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Custom Database All Model Operation API Test Here**"
+		},
+		{
+			"name": "DataOperation",
+			"item": [
+				{
+					"name": "Data Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\",\r\n    \"data\": {\r\n        \"Data\": \"data\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/data",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\",\r\n    \"data\": {\r\n        \"modalName\": \"modalName\"\r\n    },\r\n    \"key\": \"Data\",\r\n    \"value\": \"data\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/data/update",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"data",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\",\r\n    \"key\": \"Data\",\r\n    \"value\": \"data\"\r\n\r\n    // \"key\": \"modalName\",\r\n    // \"value\": \"modalName\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/data/delete",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"data",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Read",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\",\r\n    \"key\": \"Data\",\r\n    \"value\": \"data\"\r\n    \r\n    // \"key\": \"modalName\",\r\n    // \"value\": \"modalName\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/data/read",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"data",
+								"read"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QueryOperation",
+			"item": [
+				{
+					"name": "Data By Field",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\",\r\n    \"key\": \"Data\"\r\n    // \"key\": \"modalName\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/query",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"query"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backup & Restore",
+			"item": [
+				{
+					"name": "BackUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/backup",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"backup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelName\": \"exampleModel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LocalURL}}/restore",
+							"host": [
+								"{{LocalURL}}"
+							],
+							"path": [
+								"restore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "LocalURL",
+			"value": "localhost:8080/v1/api"
+		}
+	]
+}
