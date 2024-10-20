@@ -2,7 +2,7 @@ import express from 'express';
 import { handleCreateModel, handleRenameModel, handleDeleteModel, handleAccessModel } from "../controller/ModelOperation.js";
 import { handleCreateDoc, handleUpdateDoc, handleDeleteDoc, handleReadDoc } from '../controller/DataOperation.js';
 import { handleQueryByField } from '../controller/QueryOperation.js';
-import { handleBackupModel, handleRestoreModel } from '../controller/BackUpRestoreOperation.js';
+import { handleBackupModel, handleRestoreModel, handleDeleteBackup } from '../controller/BackUpRestoreOperation.js';
 
 const routes = express.Router();
 
@@ -104,5 +104,14 @@ routes.post('/backup', handleBackupModel);
  * @throws {Object} - Error messages for restoration failures or invalid model names.
  */
 routes.post('/restore', handleRestoreModel);
+
+/**
+ * @route POST /delete
+ * @desc Delete an existing backup
+ * @access Public
+ * @returns {Object} - Confirmation message indicating backup deletion.
+ * @throws {Object} - Error messages for validation errors or non-existent documents.
+ */
+routes.post('/delete', handleDeleteBackup);
 
 export default routes;

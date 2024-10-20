@@ -14,6 +14,7 @@ DocStore is a custom database server designed for managing document storage and 
 - [API Endpoints](#api-endpoints)
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
+- [References](#references)
 - [License](#license)
 
 ## Features
@@ -25,6 +26,8 @@ DocStore is a custom database server designed for managing document storage and 
 - **Intuitive Querying**: Easily search for documents by specific fields, enabling you to find the exact information you need without hassle. This powerful querying capability makes retrieving relevant data quick and efficient.
 
 - **Effortless Backup and Restore**: Protect your valuable data with built-in backup and restore functionality. Create secure backups of your models and restore them with ease, ensuring that your data is always safe and recoverable.
+
+- **Delete Backup by Model Name**: Conveniently delete backups associated with specific model names, allowing you to manage your storage effectively and remove unnecessary backups.
 
 - **User-Friendly API**: Designed with a clean and intuitive RESTful API, allowing for straightforward integration with front-end applications or third-party services. Developers can easily connect to the DocStore for smooth data operations.
 
@@ -92,6 +95,7 @@ DocStore is a custom database server designed for managing document storage and 
 | POST   | `/query`             | Query data by field in a specified model |
 | POST   | `/backup`            | Backup the specified model                |
 | POST   | `/restore`           | Restore the specified model from backup   |
+| POST   | `/delete`            | Delete a backup by model name             |
 
 ## Environment Variables
 
@@ -115,8 +119,6 @@ Contributions are welcome! Please fork the repository and submit a pull request.
    git push origin feature/YourFeature
    ```
 5. Open a pull request.
-
-Here’s a **References** section that you can include in your README file, formatted for clarity and readability:
 
 ## References
 

@@ -13,7 +13,7 @@ import { Path } from '../Common/path.js';
  * @param {Object} res - The response object used to send back the response.
  * @returns {Object} - JSON response indicating success or error.
  */
-const handleCreateModel = async (req, res) => {
+export const handleCreateModel = async (req, res) => {
     const { modelName } = req.body;
     const dir = Path.Model + modelName;
 
@@ -52,7 +52,7 @@ const handleCreateModel = async (req, res) => {
  * @param {Object} res - The response object used to send back the response.
  * @returns {Object} - JSON response indicating success or error.
  */
-const handleRenameModel = async (req, res) => {
+export const handleRenameModel = async (req, res) => {
     const { modelOldName, modelNewName } = req.body;
     const oldDir = './database/' + modelOldName;
     const newDir = './database/' + modelNewName;
@@ -99,7 +99,7 @@ const handleRenameModel = async (req, res) => {
  * @param {Object} res - The response object used to send back the response.
  * @returns {Object} - JSON response indicating success or error.
  */
-const handleDeleteModel = async (req, res) => {
+export const handleDeleteModel = async (req, res) => {
     const { modelName } = req.body;
     const dir = Path.Model + modelName;
 
@@ -137,7 +137,7 @@ const handleDeleteModel = async (req, res) => {
  * @param {Object} res - The response object used to send back the response.
  * @returns {Object} - JSON response with model files or error details.
  */
-const handleAccessModel = async (req, res) => {
+export const handleAccessModel = async (req, res) => {
     const { modelName } = req.body;
     const dir = Path.Model + modelName;
 
@@ -167,5 +167,3 @@ const handleAccessModel = async (req, res) => {
         }
     }
 };
-
-export { handleCreateModel, handleRenameModel, handleDeleteModel, handleAccessModel };
