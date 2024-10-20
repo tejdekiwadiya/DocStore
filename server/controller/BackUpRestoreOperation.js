@@ -1,4 +1,3 @@
-// import { unlinkSync } from 'fs';
 import { backUpModel, restoreModel, existsCheck, readDir, removeDir } from '../Common/commonModules.js';
 import { Path } from '../Common/path.js';
 import path from 'path';
