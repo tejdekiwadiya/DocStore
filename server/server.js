@@ -20,7 +20,7 @@ app.use(express.json()); // Enables the application to parse incoming JSON reque
  * @route /v1/api
  * @desc User-related operations
  * @access Public
- */ 
+ */
 app.use('/v1/api', userRoutes); // Sets up a base URL for all user-related API endpoints
 
 // Start the server and listen for incoming requests
